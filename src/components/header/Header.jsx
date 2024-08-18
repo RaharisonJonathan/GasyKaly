@@ -88,6 +88,54 @@ export const Header = () => {
 
 
 export function SearchAlert({fermer}){
+
+  const dataCard = {
+    "id": 1,
+    "title": "Ravitoto",
+    "image": "ravitoto.webp",
+    "category": "plats",
+    "subCategory": "populaires",
+    "rating": 4.5,
+    "isRecommended": true,
+    "isRecent": false,
+    "ingredients": [
+      "500g de feuilles de manioc",
+      "300g de viande de porc",
+      "2 oignons",
+      "4 gousses d'ail",
+      "1 cuillère à café de gingembre",
+      "Sel, poivre"
+    ],
+    "utensils": [
+      "Couteau",
+      "Planche à découper",
+      "Casserole",
+      "Cuillère en bois",
+      "Bol"
+    ],
+    "preparations": [
+      {
+        "step": 1,
+        "description": "Hachez les feuilles de manioc."
+      },
+      {
+        "step": 2,
+        "description": "Découpez la viande de porc en morceaux."
+      },
+      {
+        "step": 3,
+        "description": "Faites revenir les oignons et l'ail dans une casserole avec un peu d'huile."
+      },
+      {
+        "step": 4,
+        "description": "Ajoutez la viande et faites-la dorer."
+      },
+      {
+        "step": 5,
+        "description": "Ajoutez les feuilles de manioc et le gingembre, puis laissez mijoter pendant 1 heure."
+      }
+    ]
+  }
   return(
     <>
       <div className="search-alert">
@@ -96,14 +144,48 @@ export function SearchAlert({fermer}){
           <input type="search" placeholder="Search your food..." />
         </div>
         <div className="container-list">
-          <select name="" id="">
+          {/* <select name="" id="">
             <option value="rien">Rien</option>
             <option value="rien">trois</option>
             <option value="rien">deus</option>
             <option value="rien">1</option>
-          </select>
+          </select> */}
           <div className="results">
-            Empty !
+            <CardSearch card={dataCard}/>
+            <CardSearch card={dataCard}/>
+            <CardSearch card={dataCard}/>
+            <CardSearch card={dataCard}/>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+function CardSearch({card}){
+  return(
+    <>
+      <div className="card-search">
+        <div className="card-search-image">
+        <img src={new URL(`../../assets/${card.image}`, import.meta.url).href} alt={card.title} />
+        </div>
+        <div className="card-search-text">
+          <h2>{card.title}</h2>
+          <div className="card-search-rating">
+            {Array.from({ length: 5 }, (_, index) => (
+              <span
+                key={index}
+                className="card-search-star"
+                data-value={index + 1}
+                style={{ color: index < card.rating ? 'gold' : 'gray' }}
+              >
+                &#9733;
+              </span>
+            ))}
+            <span className='card-search-notes'>{card.rating}</span>
+          </div>
+          <div className="descriptions">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, pariatur quo consequuntur iure aliquam atque sapiente officiis culpa blanditiis, cumque nesciunt, maiores labore? Vitae, corporis!
           </div>
         </div>
       </div>
