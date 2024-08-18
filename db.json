@@ -1,0 +1,991 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Ravitoto",
+      "image": "ravitoto.webp",
+      "category": "plats",
+      "subCategory": "populaires",
+      "rating": 4.5,
+      "isRecommended": true,
+      "isRecent": false,
+      "ingredients": [
+        "500g de feuilles de manioc",
+        "300g de viande de porc",
+        "2 oignons",
+        "4 gousses d'ail",
+        "1 cuillère à café de gingembre",
+        "Sel, poivre"
+      ],
+      "utensils": [
+        "Couteau",
+        "Planche à découper",
+        "Casserole",
+        "Cuillère en bois",
+        "Bol"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Hachez les feuilles de manioc."
+        },
+        {
+          "step": 2,
+          "description": "Découpez la viande de porc en morceaux."
+        },
+        {
+          "step": 3,
+          "description": "Faites revenir les oignons et l'ail dans une casserole avec un peu d'huile."
+        },
+        {
+          "step": 4,
+          "description": "Ajoutez la viande et faites-la dorer."
+        },
+        {
+          "step": 5,
+          "description": "Ajoutez les feuilles de manioc et le gingembre, puis laissez mijoter pendant 1 heure."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Romazava",
+      "image": "romazava.webp",
+      "category": "plats",
+      "subCategory": "populaires",
+      "rating": 5,
+      "isRecommended": true,
+      "isRecent": true,
+      "ingredients": [
+        "500g de viande de zébu",
+        "200g de brèdes",
+        "2 tomates",
+        "2 oignons",
+        "1 cuillère à café de gingembre",
+        "Sel, poivre"
+      ],
+      "utensils": [
+        "Couteau",
+        "Planche à découper",
+        "Casserole",
+        "Cuillère en bois",
+        "Bol"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Découpez la viande en morceaux."
+        },
+        {
+          "step": 2,
+          "description": "Émincez les oignons et les tomates."
+        },
+        {
+          "step": 3,
+          "description": "Faites revenir les oignons et les tomates dans une casserole avec un peu d'huile."
+        },
+        {
+          "step": 4,
+          "description": "Ajoutez la viande et faites-la dorer."
+        },
+        {
+          "step": 5,
+          "description": "Ajoutez les brèdes et le gingembre, puis laissez mijoter pendant 1 heure."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Akara",
+      "image": "akara.jpg",
+      "category": "plats",
+      "subCategory": "populaires",
+      "rating": 4,
+      "isRecommended": false,
+      "isRecent": true,
+      "ingredients": [
+        "250g de haricots noirs",
+        "1 oignon",
+        "2 gousses d'ail",
+        "1 piment",
+        "1 cuillère à café de paprika",
+        "Sel, poivre",
+        "Huile pour friture"
+      ],
+      "utensils": [
+        "Mixeur",
+        "Bol",
+        "Friteuse"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Faites tremper les haricots noirs pendant une nuit."
+        },
+        {
+          "step": 2,
+          "description": "Mixez les haricots avec l'oignon, l'ail, et le piment jusqu'à obtenir une pâte."
+        },
+        {
+          "step": 3,
+          "description": "Formez des petites boules avec la pâte."
+        },
+        {
+          "step": 4,
+          "description": "Faites chauffer l'huile et faites frémir les boules jusqu'à ce qu'elles soient dorées."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Mofogasy",
+      "image": "mofogasy.webp",
+      "category": "goûters",
+      "subCategory": "populaires",
+      "rating": 5,
+      "isRecommended": true,
+      "isRecent": false,
+      "ingredients": [
+        "250g de farine",
+        "2 oeufs",
+        "200ml de lait",
+        "1 cuillère à soupe de sucre",
+        "1 pincée de sel"
+      ],
+      "utensils": [
+        "Fouet",
+        "Poêle",
+        "Louchet"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Mélangez la farine, le sucre et le sel."
+        },
+        {
+          "step": 2,
+          "description": "Ajoutez les oeufs et mélangez."
+        },
+        {
+          "step": 3,
+          "description": "Versez le lait petit à petit tout en mélangeant pour éviter les grumeaux."
+        },
+        {
+          "step": 4,
+          "description": "Faites chauffer une poêle et versez une louche de pâte pour chaque mofogasy."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Koba",
+      "image": "koba.webp",
+      "category": "desserts",
+      "subCategory": "récents",
+      "rating": 5,
+      "isRecommended": true,
+      "isRecent": false,
+      "ingredients": [
+        "250g de farine de riz",
+        "200g de sucre",
+        "100g de cacahuètes",
+        "1 banane",
+        "2 cuillères à soupe d'eau"
+      ],
+      "utensils": [
+        "Mixeur",
+        "Moule",
+        "Cuillère"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Écrasez les cacahuètes et la banane."
+        },
+        {
+          "step": 2,
+          "description": "Mélangez la farine de riz, le sucre, les cacahuètes et la banane."
+        },
+        {
+          "step": 3,
+          "description": "Ajoutez l'eau et mélangez jusqu'à obtenir une pâte homogène."
+        },
+        {
+          "step": 4,
+          "description": "Versez dans un moule et faites cuire à la vapeur pendant 1 heure."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Sambos",
+      "image": "poulet.jpeg",
+      "category": "plats",
+      "subCategory": "populaires",
+      "rating": 5,
+      "isRecommended": true,
+      "isRecent": false,
+      "ingredients": [
+        "200g de viande hachée",
+        "1 oignon",
+        "2 gousses d'ail",
+        "2 cuillères à café de curry",
+        "Pâte à samosa",
+        "Huile pour friture"
+      ],
+      "utensils": [
+        "Poêle",
+        "Bol",
+        "Friteuse"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Faites revenir l'oignon et l'ail dans une poêle avec un peu d'huile."
+        },
+        {
+          "step": 2,
+          "description": "Ajoutez la viande et faites-la cuire jusqu'à ce qu'elle soit bien dorée."
+        },
+        {
+          "step": 3,
+          "description": "Assaisonnez avec du curry, sel et poivre."
+        },
+        {
+          "step": 4,
+          "description": "Garnissez les feuilles de pâte avec la préparation et pliez-les en triangles."
+        },
+        {
+          "step": 5,
+          "description": "Faites frémir les sambos jusqu'à ce qu'ils soient dorés."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Hen'omby Ritra",
+      "image": "henomby-ritra.webp",
+      "category": "plats",
+      "subCategory": "populaires",
+      "rating": 4.7,
+      "isRecommended": true,
+      "isRecent": true,
+      "ingredients": [
+        "500g de viande de boeuf",
+        "2 tomates",
+        "2 oignons",
+        "1 poivron vert",
+        "3 cuillères à soupe de pâte de tomate",
+        "1 cuillère à café de curcuma",
+        "Sel, poivre",
+        "Huile"
+      ],
+      "utensils": [
+        "Couteau",
+        "Planche à découper",
+        "Casserole",
+        "Cuillère en bois"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Découpez la viande en morceaux."
+        },
+        {
+          "step": 2,
+          "description": "Émincez les oignons, les tomates et le poivron."
+        },
+        {
+          "step": 3,
+          "description": "Faites revenir les oignons dans une casserole avec un peu d'huile."
+        },
+        {
+          "step": 4,
+          "description": "Ajoutez les tomates et le poivron, puis laissez mijoter quelques minutes."
+        },
+        {
+          "step": 5,
+          "description": "Ajoutez la viande, la pâte de tomate, le curcuma, le sel et le poivre, puis laissez mijoter pendant 1 heure."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Ranon'apango",
+      "image": "ranonapango.webp",
+      "category": "plats",
+      "subCategory": "traditionnels",
+      "rating": 4.3,
+      "isRecommended": true,
+      "isRecent": false,
+      "ingredients": [
+        "1 litre d'eau",
+        "200g de riz",
+        "1 cuillère à soupe de sucre",
+        "1 cuillère à café de sel",
+        "Quelques feuilles de laurier"
+      ],
+      "utensils": [
+        "Casserole",
+        "Cuillère en bois"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Faites bouillir l'eau dans une casserole."
+        },
+        {
+          "step": 2,
+          "description": "Ajoutez le riz, le sucre, le sel et les feuilles de laurier."
+        },
+        {
+          "step": 3,
+          "description": "Laissez mijoter à feu doux pendant environ 30 minutes."
+        },
+        {
+          "step": 4,
+          "description": "Servez chaud comme boisson ou accompagnement."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Bananes Frites",
+      "image": "bananes-frites.webp",
+      "category": "goûters",
+      "subCategory": "populaires",
+      "rating": 4.6,
+      "isRecommended": true,
+      "isRecent": true,
+      "ingredients": [
+        "4 bananes mûres",
+        "Huile pour friture",
+        "Sucre glace"
+      ],
+      "utensils": [
+        "Couteau",
+        "Poêle",
+        "Assiette"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Épluchez les bananes et coupez-les en rondelles."
+        },
+        {
+          "step": 2,
+          "description": "Faites chauffer l'huile dans une poêle."
+        },
+        {
+          "step": 3,
+          "description": "Faites frémir les rondelles de banane jusqu'à ce qu'elles soient dorées."
+        },
+        {
+          "step": 4,
+          "description": "Égouttez les bananes et saupoudrez-les de sucre glace."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Mofo Gasy au Lait de Coco",
+      "image": "mofo-gasy-coco.webp",
+      "category": "goûters",
+      "subCategory": "traditionnels",
+      "rating": 4.8,
+      "isRecommended": true,
+      "isRecent": false,
+      "ingredients": [
+        "250g de farine",
+        "200ml de lait de coco",
+        "100g de sucre",
+        "1 cuillère à café de levure",
+        "1 pincée de sel"
+      ],
+      "utensils": [
+        "Fouet",
+        "Poêle",
+        "Louchet"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Mélangez la farine, le sucre, la levure et le sel."
+        },
+        {
+          "step": 2,
+          "description": "Ajoutez le lait de coco et mélangez jusqu'à obtenir une pâte lisse."
+        },
+        {
+          "step": 3,
+          "description": "Faites chauffer une poêle et versez une louche de pâte pour chaque mofo gasy."
+        },
+        {
+          "step": 4,
+          "description": "Cuisez à feu moyen jusqu'à ce que les deux côtés soient dorés."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Kitoza",
+      "image": "kitoza.webp",
+      "category": "plats",
+      "subCategory": "populaires",
+      "rating": 4.5,
+      "isRecommended": true,
+      "isRecent": false,
+      "ingredients": [
+        "500g de viande de porc",
+        "2 cuillères à soupe de soja",
+        "2 cuillères à soupe d'huile",
+        "2 cuillères à soupe de sucre",
+        "1 cuillère à café de gingembre",
+        "1 cuillère à café de paprika",
+        "Sel, poivre"
+      ],
+      "utensils": [
+        "Couteau",
+        "Bol",
+        "Poêle"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Découpez la viande en morceaux."
+        },
+        {
+          "step": 2,
+          "description": "Mélangez la viande avec le soja, l'huile, le sucre, le gingembre, le paprika, le sel et le poivre."
+        },
+        {
+          "step": 3,
+          "description": "Faites mariner la viande pendant 1 heure."
+        },
+        {
+          "step": 4,
+          "description": "Faites cuire la viande dans une poêle à feu moyen jusqu'à ce qu'elle soit bien dorée."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Pâté de Tilapia",
+      "image": "pate-tilapia.webp",
+      "category": "plats",
+      "subCategory": "populaires",
+      "rating": 4.7,
+      "isRecommended": true,
+      "isRecent": true,
+      "ingredients": [
+        "400g de tilapia",
+        "2 oignons",
+        "2 tomates",
+        "1 cuillère à soupe de pâte de tomate",
+        "1 cuillère à café de curcuma",
+        "Sel, poivre",
+        "Huile"
+      ],
+      "utensils": [
+        "Couteau",
+        "Planche à découper",
+        "Poêle"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Découpez le tilapia en morceaux."
+        },
+        {
+          "step": 2,
+          "description": "Émincez les oignons et les tomates."
+        },
+        {
+          "step": 3,
+          "description": "Faites revenir les oignons dans une poêle avec un peu d'huile."
+        },
+        {
+          "step": 4,
+          "description": "Ajoutez les tomates et la pâte de tomate, puis laissez mijoter quelques minutes."
+        },
+        {
+          "step": 5,
+          "description": "Ajoutez le tilapia, le curcuma, le sel et le poivre, puis faites cuire jusqu'à ce que le poisson soit tendre."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Ragoût de Poulet",
+      "image": "ragout-poulet.webp",
+      "category": "plats",
+      "subCategory": "récents",
+      "rating": 4.6,
+      "isRecommended": true,
+      "isRecent": true,
+      "ingredients": [
+        "500g de poulet",
+        "3 pommes de terre",
+        "2 carottes",
+        "2 oignons",
+        "1 cuillère à soupe de pâte de tomate",
+        "1 cuillère à café de paprika",
+        "Sel, poivre",
+        "Huile"
+      ],
+      "utensils": [
+        "Couteau",
+        "Planche à découper",
+        "Casserole"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Découpez le poulet en morceaux."
+        },
+        {
+          "step": 2,
+          "description": "Épluchez et coupez les pommes de terre et les carottes."
+        },
+        {
+          "step": 3,
+          "description": "Faites revenir les oignons dans une casserole avec un peu d'huile."
+        },
+        {
+          "step": 4,
+          "description": "Ajoutez le poulet et faites-le dorer."
+        },
+        {
+          "step": 5,
+          "description": "Ajoutez les pommes de terre, les carottes, la pâte de tomate, le paprika, le sel et le poivre, puis laissez mijoter pendant 45 minutes."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Mihary",
+      "image": "mihary.webp",
+      "category": "plats",
+      "subCategory": "Recommandations",
+      "rating": 4.4,
+      "isRecommended": true,
+      "isRecent": false,
+      "ingredients": [
+        "500g de viande de boeuf",
+        "2 aubergines",
+        "2 tomates",
+        "2 oignons",
+        "1 cuillère à café de gingembre",
+        "1 cuillère à café de curcuma",
+        "Sel, poivre",
+        "Huile"
+      ],
+      "utensils": [
+        "Couteau",
+        "Planche à découper",
+        "Poêle"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Découpez la viande en morceaux."
+        },
+        {
+          "step": 2,
+          "description": "Émincez les oignons et les tomates, puis découpez les aubergines en cubes."
+        },
+        {
+          "step": 3,
+          "description": "Faites revenir les oignons dans une poêle avec de l'huile."
+        },
+        {
+          "step": 4,
+          "description": "Ajoutez la viande et faites-la dorer."
+        },
+        {
+          "step": 5,
+          "description": "Ajoutez les tomates, les aubergines, le gingembre, le curcuma, le sel et le poivre, puis laissez mijoter jusqu'à ce que les légumes soient tendres."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Taro Frit",
+      "image": "taro-frit.webp",
+      "category": "goûters",
+      "subCategory": "Recommandations",
+      "rating": 4.8,
+      "isRecommended": true,
+      "isRecent": true,
+      "ingredients": [
+        "500g de taro",
+        "Huile pour friture",
+        "Sel, poivre",
+        "1 cuillère à café de paprika"
+      ],
+      "utensils": [
+        "Couteau",
+        "Planche à découper",
+        "Friteuse"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Épluchez et coupez le taro en morceaux."
+        },
+        {
+          "step": 2,
+          "description": "Faites chauffer l'huile dans une friteuse."
+        },
+        {
+          "step": 3,
+          "description": "Faites frémir les morceaux de taro jusqu'à ce qu'ils soient dorés et croustillants."
+        },
+        {
+          "step": 4,
+          "description": "Égouttez et assaisonnez avec le sel, le poivre et le paprika."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Tarte au Coco",
+      "image": "tarte-coco.webp",
+      "category": "desserts",
+      "subCategory": "récents",
+      "rating": 4.9,
+      "isRecommended": true,
+      "isRecent": true,
+      "ingredients": [
+        "1 pâte brisée",
+        "200g de noix de coco râpée",
+        "150g de sucre",
+        "3 oeufs",
+        "100ml de lait",
+        "1 cuillère à café de vanille"
+      ],
+      "utensils": [
+        "Moule à tarte",
+        "Bol",
+        "Fouet"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Préchauffez le four à 180°C."
+        },
+        {
+          "step": 2,
+          "description": "Étalez la pâte brisée dans le moule à tarte."
+        },
+        {
+          "step": 3,
+          "description": "Dans un bol, mélangez la noix de coco, le sucre, les oeufs, le lait et la vanille jusqu'à obtenir une préparation homogène."
+        },
+        {
+          "step": 4,
+          "description": "Versez le mélange sur la pâte et faites cuire au four pendant environ 35 minutes."
+        },
+        {
+          "step": 5,
+          "description": "Laissez refroidir avant de servir."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Tsaramaso sy Voanjobory",
+      "image": "tsaramaso-voanjobory.webp",
+      "category": "plats",
+      "subCategory": "Recommandations",
+      "rating": 4.6,
+      "isRecommended": true,
+      "isRecent": false,
+      "ingredients": [
+        "200g de haricots rouges",
+        "200g de pois chiches",
+        "2 tomates",
+        "1 oignon",
+        "2 cuillères à soupe de pâte de tomate",
+        "1 cuillère à café de curry",
+        "Sel, poivre",
+        "Huile"
+      ],
+      "utensils": [
+        "Couteau",
+        "Planche à découper",
+        "Casserole"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Faites tremper les haricots rouges et les pois chiches pendant une nuit."
+        },
+        {
+          "step": 2,
+          "description": "Égouttez et faites cuire les haricots et les pois chiches dans une casserole jusqu'à ce qu'ils soient tendres."
+        },
+        {
+          "step": 3,
+          "description": "Émincez les oignons et les tomates."
+        },
+        {
+          "step": 4,
+          "description": "Faites revenir les oignons dans une casserole avec un peu d'huile."
+        },
+        {
+          "step": 5,
+          "description": "Ajoutez les tomates et la pâte de tomate, puis laissez mijoter quelques minutes."
+        },
+        {
+          "step": 6,
+          "description": "Ajoutez les haricots et les pois chiches, assaisonnez avec le curry, le sel et le poivre, et laissez mijoter pendant 20 minutes."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Pouding au Lait",
+      "image": "pouding-lait.webp",
+      "category": "desserts",
+      "subCategory": "Recommandations",
+      "rating": 4.7,
+      "isRecommended": true,
+      "isRecent": false,
+      "ingredients": [
+        "1 litre de lait",
+        "100g de sucre",
+        "50g de maïzena",
+        "1 cuillère à café d'extrait de vanille"
+      ],
+      "utensils": [
+        "Casserole",
+        "Fouet",
+        "Moule"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Dans une casserole, mélangez le lait et le sucre."
+        },
+        {
+          "step": 2,
+          "description": "Chauffez le mélange à feu moyen jusqu'à ce que le sucre soit dissous."
+        },
+        {
+          "step": 3,
+          "description": "Diluez la maïzena dans un peu de lait froid et ajoutez-la au mélange chaud."
+        },
+        {
+          "step": 4,
+          "description": "Continuez à remuer jusqu'à ce que le mélange épaississe."
+        },
+        {
+          "step": 5,
+          "description": "Retirez du feu et ajoutez l'extrait de vanille."
+        },
+        {
+          "step": 6,
+          "description": "Versez dans un moule et laissez refroidir avant de servir."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Gratin de Patates Douces",
+      "image": "gratin-patates-douces.webp",
+      "category": "plats",
+      "subCategory": "récents",
+      "rating": 4.9,
+      "isRecommended": true,
+      "isRecent": true,
+      "ingredients": [
+        "500g de patates douces",
+        "200ml de crème fraîche",
+        "100g de fromage râpé",
+        "2 gousses d'ail",
+        "1 cuillère à café de muscade",
+        "Sel, poivre",
+        "Beurre pour le plat"
+      ],
+      "utensils": [
+        "Couteau",
+        "Planche à découper",
+        "Plat à gratin",
+        "Râpe"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Préchauffez le four à 180°C."
+        },
+        {
+          "step": 2,
+          "description": "Épluchez et découpez les patates douces en fines rondelles."
+        },
+        {
+          "step": 3,
+          "description": "Frottez un plat à gratin avec du beurre et disposez les rondelles de patates douces en couches."
+        },
+        {
+          "step": 4,
+          "description": "Dans un bol, mélangez la crème fraîche, l'ail émincé, la muscade, le sel et le poivre."
+        },
+        {
+          "step": 5,
+          "description": "Versez le mélange sur les patates douces et parsemez de fromage râpé."
+        },
+        {
+          "step": 6,
+          "description": "Faites cuire au four pendant environ 45 minutes jusqu'à ce que le gratin soit doré et les patates tendres."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Soupe de Poisson",
+      "image": "soupe-poisson.webp",
+      "category": "plats",
+      "subCategory": "Recommandations",
+      "rating": 4.6,
+      "isRecommended": true,
+      "isRecent": false,
+      "ingredients": [
+        "500g de poisson blanc",
+        "2 pommes de terre",
+        "2 carottes",
+        "1 oignon",
+        "2 tomates",
+        "1 cuillère à café de curcuma",
+        "1 cuillère à café de gingembre",
+        "Sel, poivre",
+        "1 litre d'eau"
+      ],
+      "utensils": [
+        "Couteau",
+        "Planche à découper",
+        "Casserole"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Découpez le poisson en morceaux."
+        },
+        {
+          "step": 2,
+          "description": "Épluchez et coupez les pommes de terre et les carottes."
+        },
+        {
+          "step": 3,
+          "description": "Émincez l'oignon et les tomates."
+        },
+        {
+          "step": 4,
+          "description": "Faites revenir l'oignon dans une casserole avec un peu d'huile."
+        },
+        {
+          "step": 5,
+          "description": "Ajoutez les tomates, les pommes de terre, les carottes, le curcuma et le gingembre, puis ajoutez l'eau."
+        },
+        {
+          "step": 6,
+          "description": "Laissez mijoter jusqu'à ce que les légumes soient tendres."
+        },
+        {
+          "step": 7,
+          "description": "Ajoutez les morceaux de poisson et laissez cuire jusqu'à ce qu'ils soient cuits."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Fried Plantains",
+      "image": "fried-plantains.webp",
+      "category": "goûters",
+      "subCategory": "Recommandations",
+      "rating": 4.8,
+      "isRecommended": true,
+      "isRecent": true,
+      "ingredients": [
+        "4 bananes plantains",
+        "Huile pour friture",
+        "Sel",
+        "Sucre (optionnel)"
+      ],
+      "utensils": [
+        "Couteau",
+        "Planche à découper",
+        "Friteuse"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Épluchez les bananes plantains et découpez-les en tranches."
+        },
+        {
+          "step": 2,
+          "description": "Faites chauffer l'huile dans une friteuse ou une poêle."
+        },
+        {
+          "step": 3,
+          "description": "Faites frémir les tranches de banane jusqu'à ce qu'elles soient dorées et croustillantes."
+        },
+        {
+          "step": 4,
+          "description": "Égouttez et assaisonnez avec un peu de sel ou de sucre selon votre préférence."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Tananarivienne",
+      "image": "tananarivienne.webp",
+      "category": "plats",
+      "subCategory": "récents",
+      "rating": 4.9,
+      "isRecommended": true,
+      "isRecent": true,
+      "ingredients": [
+        "300g de viande de boeuf",
+        "200g de tomates",
+        "1 oignon",
+        "1 poivron",
+        "1 cuillère à café de paprika",
+        "1 cuillère à café de cumin",
+        "Sel, poivre",
+        "Huile"
+      ],
+      "utensils": [
+        "Couteau",
+        "Planche à découper",
+        "Poêle"
+      ],
+      "preparations": [
+        {
+          "step": 1,
+          "description": "Découpez la viande de boeuf en morceaux."
+        },
+        {
+          "step": 2,
+          "description": "Émincez les tomates, l'oignon et le poivron."
+        },
+        {
+          "step": 3,
+          "description": "Faites revenir l'oignon dans une poêle avec de l'huile."
+        },
+        {
+          "step": 4,
+          "description": "Ajoutez la viande et faites-la dorer."
+        },
+        {
+          "step": 5,
+          "description": "Ajoutez les tomates, le poivron, le paprika, le cumin, le sel et le poivre."
+        },
+        {
+          "step": 6,
+          "description": "Laissez mijoter jusqu'à ce que la viande soit tendre et les légumes cuits."
+        }
+      ]
+    }  
+  ]
+}

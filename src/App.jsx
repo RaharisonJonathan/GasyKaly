@@ -1,15 +1,25 @@
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import './App.css'
-import { Header } from './components/header/Header'
-import { Card } from './components/card/Card'
-import { Hero } from './components/hero/Hero'
+import { Acceuil } from './pages/accueil/Acceuil'
+import { Layout } from './pages/Layout'
+import { Recette } from './pages/recette/Recette'
+import { VoirTout } from './pages/VoirTout/VoirTout'
 
 function App() {
 
   return (
     <>
-      <Hero tag={"Plats populaires"}/>
-      <Hero tag={"Recommandations"}/>
-      <Hero tag={"Nouveaux plats"}/>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout/>}>
+            <Route path="/" element={<Acceuil />} />
+            <Route path="/accueil" element={<Acceuil />} />
+            <Route path="/recette/:id" element={<Recette />} />
+            <Route path='/global/:contenu' element={<VoirTout param={"category"} />} />
+            <Route path='/global/type/:contenu' element={<VoirTout param={"subCategory"} />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

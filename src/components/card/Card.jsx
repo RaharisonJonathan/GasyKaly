@@ -1,27 +1,43 @@
 import React from 'react'
 import "./card.css"
-import poulet from '../../assets/poulet.jpeg'
+import { useNavigate } from 'react-router-dom'
+import poulet from '../../assets/poulet.jpeg';
 
-export const Card = ({card}) => {
+export const Card = ({ card }) => {
+  const navigate = useNavigate();
+
+  const showRecipe = () => {
+    navigate(`/recette/${card.id}`);
+  };
+
+  const images = {
+    'poulet.jpeg': poulet,
+  };
+
   return (
-      <div class="card">
-            <div className="container-image">
-                <img src={poulet} alt="" />
-            </div>
-          <div className="container-text">
-              <h2>Poulet au coco</h2>
-              <div className="rating">
-                <span className="star" data-value="5">&#9733;</span>
-                <span className="star" data-value="4">&#9733;</span>
-                <span className="star" data-value="3">&#9733;</span>
-                <span className="star" data-value="2">&#9733;</span>
-                <span className="star" data-value="1">&#9733;</span>
-                <span className='notes'>4.7</span>
-              </div>
-            <div className="btn-div">
-                    <button className="btn">La recette</button>
-            </div>
-          </div>
+    <div className="card" onClick={showRecipe}>
+      <div className="container-image">
+        <img src={new URL(`../../assets/${card.image}`, import.meta.url).href} alt={card.title} />
       </div>
+      <div className="container-text">
+        <h2>{card.title}</h2>
+        <div className="rating">
+          {Array.from({ length: 5 }, (_, index) => (
+            <span
+              key={index}
+              className="star"
+              data-value={index + 1}
+              style={{ color: index < card.rating ? 'gold' : 'gray' }}
+            >
+              &#9733;
+            </span>
+          ))}
+          <span className='notes'>{card.rating}</span>
+        </div>
+        <div className="btn-div">
+          <button className="btn">La recette</button>
+        </div>
+      </div>
+    </div>
   )
 }

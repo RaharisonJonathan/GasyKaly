@@ -1,4 +1,10 @@
 body{
-    display: flex;
-    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background-image: url("../src/assets/poulet.jpeg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#root{
+    background-color: white;
 }

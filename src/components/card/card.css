@@ -4,9 +4,9 @@
 }
 
 .card{
-    width: 300px;
-    min-width: 300px;
-    height: 325px;
+    width: 275px;
+    min-width: 275px;
+    height: 300px;
     padding: 5px;
     background-color: white;
     box-sizing: border-box;
@@ -17,15 +17,35 @@
     align-items: flex-start;
     gap: 10px;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    transition: 0.3s;
+    cursor: pointer;
+
 }
+
+.card:hover{
+    scale: 1.1;
+}
+
 .container-image{
+    overflow: hidden;
     position: relative;
     width: 100%;
     height: 200px;
     border-radius: 20px;
     background-color: #52D960;
     padding-bottom: 5px;
+    img{
+        transition: 0.3s;
+    }
 
+}
+
+.container-image:hover{
+    img{
+        transform: rotate(5deg);
+        scale: 1.2;
+    }
 }
 
 h2{
@@ -52,7 +72,7 @@ h2{
 
 .btn-div{
     width: 100%;
-    transform: translateY(-20px);
+    transform: translateY(-40px);
 }
 .btn{
     background-color: #52D960;
@@ -69,6 +89,10 @@ h2{
     color: white;
     transform: translateY(20px);
 
+}
+.btn:hover{
+    scale: 1.1;
+    box-shadow: 0px 3px 2px green;
 }
 
 .star {

@@ -1,7 +1,8 @@
 .hero-container{
     width: 100%;
-    height: 70vh;
-    /* background-color: red; */
+    /* width: 100vw; */
+    min-height: 200px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,12 +11,13 @@
 
 
     .hero-header{
-        width: 100%;
+        width: 80%; 
         display: flex;
         align-items: center;
         justify-content: space-between;
         border-bottom: 1px solid #000000;
         padding-bottom: 15px;
+        margin: 0 auto;
 
 
         .hero-tag{
@@ -26,21 +28,113 @@
         .hero-view-all{
             font-size: 1.5rem;
             color: #52D960;
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
         }
     }
 
     .hero-slider{
-        /* width: 1200px; */
-        height: 70%;
+        /* width: 1200px; */ 
+        min-height: 300px;
+        /* min-width: 100%; */
+        /* max-width: 100px; */
         padding: 10px;
-        display: flex;
+        /* display: flex; */
         gap: 60px;
-        overflow: auto;
-        max-width: 1200px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        max-width: 85%;
         background-color: #ffffff;
 
     }
-    .hero-slider::-webkit-scrollbar{
+    /* .hero-slider::-webkit-scrollbar{
         display: none;
+    } */
+}
+
+.container-slide{
+    width: 95%;
+    /* width: max-content; */
+    height: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: red; */
+
+}
+
+
+.slide{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow{
+    font-size: 50px;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.1);
+    width: 150px;
+    height: 75px;
+    display: flex;
+    position: relative;
+    left: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    cursor: pointer;
+    float: right;
+}
+.vert{
+    background-color: #52d96024;
+    height: 500px;
+    padding-bottom: 50px;
+    border-radius: 20px;
+}
+
+.slick-arrow.slick-prev::before{
+    /* background-color: red; */
+    color: rgba(128, 128, 128, 0.781);
+    font-size: 100px !important;
+    color: #52D960;
+    position: relative;
+    left: 15px;
+    top: -25px;
+}
+
+.slick-arrow.slick-next::before{
+    /* background-color: red; */
+    color: rgba(198, 194, 194, 0.781);
+    color: #52D960;
+    font-size: 100px !important;
+    position: relative;
+    left: -95px;
+    top: -25px;
+}
+
+.slick-arrow{
+    z-index: 100;
+}
+
+
+@media screen and (max-width : 600px) {
+    .hero-container{
+        .hero-header{
+            .hero-tag{
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+    
+            .hero-view-all{
+                font-size: 1rem;
+                color: #52D960;
+            }
+        }
     }
 }
+
+

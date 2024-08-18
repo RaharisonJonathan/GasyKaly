@@ -1,5 +1,22 @@
 #root {
-  max-width: 1200px;
+  /* height: max-content; */
   margin: 0 auto;
-  padding: 2rem;
+  /* width: 90vw; */
+  max-width: 80vw;
+  max-height: 100vh;
+  overflow-x: hidden; 
+   overflow-y: auto;
+
+
+}
+
+#root::-webkit-scrollbar{
+  display: none;
+}
+
+@media screen and (max-width : 1200px) {
+  #root{
+    max-width: 100vw;
+  }
+  
 }
