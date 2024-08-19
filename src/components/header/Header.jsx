@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./header.css";
 import { Link, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
+// ... (Header and SearchAlert components)
+
 export const Header = () => {
   let status = true;
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const showMenu = () => {
     const menu = document.querySelector('.header-nav');
@@ -32,8 +38,13 @@ export const Header = () => {
       document.querySelector(".rideau").style.display = "none";
       alertStatus = true;
     }
-    console.log(status);
+    console.log(alertStatus);
   };
+
+  useEffect(() => {
+    // Close the search alert when the route changes
+    showAlertSearch();
+  }, [location]);
 
   return (
     <>
@@ -85,7 +96,6 @@ export const Header = () => {
                 <i className="fas fa-glass-martini-alt"></i> Jus
               </Link>
             </li>
-
           </ul>
         </div>
       </div>
