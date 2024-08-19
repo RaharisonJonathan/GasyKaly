@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./header.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export const Header = () => {
 
   
@@ -78,7 +78,7 @@ export const Header = () => {
       </div>
     </div>
 
-    <SearchAlert fermer={showAlertSearch}/>
+    <SearchAlert headfermeture={showMenu} fermer={showAlertSearch}/>
     <div className='rideau' onClick={showAlertSearch}>
             
     </div>
@@ -88,7 +88,7 @@ export const Header = () => {
 
 
 
-export function SearchAlert({ fermer }) {
+export function SearchAlert({ fermer, headfermeture }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [dataCards, setDataCards] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -142,7 +142,7 @@ export function SearchAlert({ fermer }) {
               <p>Loading...</p>
             ) : filteredResults.length > 0 ? (
               filteredResults.map((item) => (
-                <CardSearch card={item}/>
+                <CardSearch fermeture={fermer} headfermeture={headfermeture} card={item}/>
               ))
             ) : (
               <p>No results found</p>
@@ -154,10 +154,16 @@ export function SearchAlert({ fermer }) {
   );
 }
 
-function CardSearch({card}){
+function CardSearch({card, fermeture, headfermeture}){
+  let navigate = useNavigate()
   return(
     <>
-      <div className="card-search">
+      <div className="card-search" onClick={() => {
+        fermeture()
+        headfermeture()
+        navigate(`/recette/${card.id}`)
+        console.log("rien")
+      }}>
         <div className="card-search-image">
         <img src={new URL(`../../assets/${card.image}`, import.meta.url).href} alt={card.title} />
         </div>

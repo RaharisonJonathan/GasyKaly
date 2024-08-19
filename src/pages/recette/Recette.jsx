@@ -10,7 +10,7 @@ export const Recette = () => {
     // Remplacez cette URL par l'URL de votre API pour obtenir les détails de la recette
     fetch(`https://dummyjson.com/c/d0e0-5ccc-4067-bd86`)
       .then((res) => res.json())
-      .then((data) => setRecipe(data.recipes[id]))
+      .then((data) => setRecipe(data.recipes.filter((item) => item.id == id )[0]))
       .catch((error) => console.error('Error fetching recipe:', error));
   }, [id]);
 
