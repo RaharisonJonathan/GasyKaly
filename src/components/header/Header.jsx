@@ -92,15 +92,13 @@ export function SearchAlert({ fermer, headfermeture }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [dataCards, setDataCards] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [filteredResults, setFilteredResults] = useState([])
+  const [filteredResults, setFilteredResults] = useState([]);
 
   useEffect(() => {
     // Remplacez cette URL par l'URL de votre API
-
     fetch("https://mocki.io/v1/71ea0934-3484-4b48-a3fb-bb9ca5d04f5e")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
         setDataCards(data.recipes); // Assurez-vous que la structure des données correspond à celle que vous attendez
         setLoading(false);
       })
@@ -110,47 +108,48 @@ export function SearchAlert({ fermer, headfermeture }) {
       });
   }, []);
 
-  // Filtrer les résultats en fonction du terme de recherche
-
+  useEffect(() => {
+    // Filtrer les résultats en fonction du terme de recherche
+    if (searchTerm === "") {
+      setFilteredResults([]);
+    } else {
+      const results = dataCards.filter((item) =>
+        item.title.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredResults(results);
+    }
+  }, [searchTerm, dataCards]);
 
   return (
-    <>
-      <div className="search-alert">
-        <span onClick={fermer}>fermer</span>
-        <div className="header-search">
-          <input
-            type="search"
-            placeholder="Search your food..."
-            value={searchTerm}
-            onChange={(e) => {
-                setFilteredResults(dataCards.filter((item) =>
-                item.title.toLowerCase().includes(searchTerm.toLowerCase()))
-              );
-
-              if(e.target.value === ""){
-                setFilteredResults([])
-              }
-              return(
-                setSearchTerm(e.target.value)
-              )
-            }}
-          />
-        </div>
-        <div className="container-list">
-          <div className="results">
-            {loading ? (
-              <p>Loading...</p>
-            ) : filteredResults.length > 0 ? (
-              filteredResults.map((item) => (
-                <CardSearch fermeture={fermer} headfermeture={headfermeture} card={item}/>
-              ))
-            ) : (
-              <p>No results found</p>
-            )}
-          </div>
+    <div className="search-alert">
+      <span onClick={fermer}>Fermer</span>
+      <div className="header-search">
+        <input
+          type="search"
+          placeholder="Search your food..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
+      <div className="container-list">
+        <div className="results">
+          {loading ? (
+            <p>Loading...</p>
+          ) : filteredResults.length > 0 ? (
+            filteredResults.map((item) => (
+              <CardSearch
+                key={item.id} // Assurez-vous que `item.id` est une clé unique
+                fermeture={fermer}
+                headfermeture={headfermeture}
+                card={item}
+              />
+            ))
+          ) : (
+            <p>No results found</p>
+          )}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
