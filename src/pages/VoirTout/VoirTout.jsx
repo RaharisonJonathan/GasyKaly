@@ -9,11 +9,25 @@ export const VoirTout = ({param}) => {
 
   useEffect(() => {
     // Remplacez cette URL par l'URL de votre API pour obtenir les recettes par catégorie
-    fetch(`http://localhost:3000/recipes?${param}=${contenu}`)
+    fetch(`https://mocki.io/v1/71ea0934-3484-4b48-a3fb-bb9ca5d04f5e`)
       .then((res) => res.json())
-      .then((data) => setData(data))
+      .then((data) => setData(() =>{
+        if(param === "category"){
+          return(
+            data.recipes.filter((item) => item.category === contenu)
+          )
+        }
+
+        if(param === "subCategory"){
+          return(
+            data.recipes.filter((item) => item.subCategory === contenu)
+          )
+        }
+      }))
       .catch((error) => console.error('Error fetching data:', error));
   }, [contenu]);
+
+  console.log(data)
 
   return (
     <div className="contenant">

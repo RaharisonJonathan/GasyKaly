@@ -46,7 +46,7 @@ export const Hero = ({ tag, bg }) => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3000/recipes")
+    fetch("https://mocki.io/v1/71ea0934-3484-4b48-a3fb-bb9ca5d04f5e")
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
@@ -55,7 +55,7 @@ export const Hero = ({ tag, bg }) => {
       })
       .then((data) => {
         console.log('Fetched data:', data); // Debugging line
-        setDataCard(data.filter((dataItems) => dataItems.subCategory === `${tag}`));
+        setDataCard(data.recipes.filter((dataItems) => dataItems.subCategory === `${tag}`));
       })
       .catch((error) => console.error('Error fetching data:', error));
   }, []);

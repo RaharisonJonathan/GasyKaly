@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 export const Header = () => {
@@ -87,79 +87,71 @@ export const Header = () => {
 };
 
 
-export function SearchAlert({fermer}){
 
-  const dataCard = {
-    "id": 1,
-    "title": "Ravitoto",
-    "image": "ravitoto.webp",
-    "category": "plats",
-    "subCategory": "populaires",
-    "rating": 4.5,
-    "isRecommended": true,
-    "isRecent": false,
-    "ingredients": [
-      "500g de feuilles de manioc",
-      "300g de viande de porc",
-      "2 oignons",
-      "4 gousses d'ail",
-      "1 cuillère à café de gingembre",
-      "Sel, poivre"
-    ],
-    "utensils": [
-      "Couteau",
-      "Planche à découper",
-      "Casserole",
-      "Cuillère en bois",
-      "Bol"
-    ],
-    "preparations": [
-      {
-        "step": 1,
-        "description": "Hachez les feuilles de manioc."
-      },
-      {
-        "step": 2,
-        "description": "Découpez la viande de porc en morceaux."
-      },
-      {
-        "step": 3,
-        "description": "Faites revenir les oignons et l'ail dans une casserole avec un peu d'huile."
-      },
-      {
-        "step": 4,
-        "description": "Ajoutez la viande et faites-la dorer."
-      },
-      {
-        "step": 5,
-        "description": "Ajoutez les feuilles de manioc et le gingembre, puis laissez mijoter pendant 1 heure."
-      }
-    ]
-  }
-  return(
+export function SearchAlert({ fermer }) {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [dataCards, setDataCards] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [filteredResults, setFilteredResults] = useState([])
+
+  useEffect(() => {
+    // Remplacez cette URL par l'URL de votre API
+
+    fetch("https://mocki.io/v1/71ea0934-3484-4b48-a3fb-bb9ca5d04f5e")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        setDataCards(data.recipes); // Assurez-vous que la structure des données correspond à celle que vous attendez
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Erreur lors du chargement des données:', error);
+        setLoading(false);
+      });
+  }, []);
+
+  // Filtrer les résultats en fonction du terme de recherche
+
+
+  return (
     <>
       <div className="search-alert">
-      <span onClick={fermer}>fermer</span>
+        <span onClick={fermer}>fermer</span>
         <div className="header-search">
-          <input type="search" placeholder="Search your food..." />
+          <input
+            type="search"
+            placeholder="Search your food..."
+            value={searchTerm}
+            onChange={(e) => {
+                setFilteredResults(dataCards.filter((item) =>
+                item.title.toLowerCase().includes(searchTerm.toLowerCase()))
+              );
+
+              if(e.target.value === ""){
+                setFilteredResults([])
+              }
+              return(
+                setSearchTerm(e.target.value)
+              )
+            }}
+          />
         </div>
         <div className="container-list">
-          {/* <select name="" id="">
-            <option value="rien">Rien</option>
-            <option value="rien">trois</option>
-            <option value="rien">deus</option>
-            <option value="rien">1</option>
-          </select> */}
           <div className="results">
-            <CardSearch card={dataCard}/>
-            <CardSearch card={dataCard}/>
-            <CardSearch card={dataCard}/>
-            <CardSearch card={dataCard}/>
+            {loading ? (
+              <p>Loading...</p>
+            ) : filteredResults.length > 0 ? (
+              filteredResults.map((item) => (
+                <CardSearch card={item}/>
+              ))
+            ) : (
+              <p>No results found</p>
+            )}
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 
 function CardSearch({card}){

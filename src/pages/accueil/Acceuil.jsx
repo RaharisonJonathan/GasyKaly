@@ -32,10 +32,10 @@ const FirstView = () => {
                         <div className='banner-text'>
                             Trouver les meilleurs plats malgaches dans toutes les catégories
                         </div>
-                        <div className="button-group">
+                        {/* <div className="button-group">
                             <button className="create">Créer</button>
                             <button className="view">Visiter</button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

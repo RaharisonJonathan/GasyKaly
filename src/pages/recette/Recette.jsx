@@ -8,9 +8,9 @@ export const Recette = () => {
 
   useEffect(() => {
     // Remplacez cette URL par l'URL de votre API pour obtenir les détails de la recette
-    fetch(`http://localhost:3000/recipes/${id}`)
+    fetch(`https://dummyjson.com/c/d0e0-5ccc-4067-bd86`)
       .then((res) => res.json())
-      .then((data) => setRecipe(data))
+      .then((data) => setRecipe(data.recipes[id]))
       .catch((error) => console.error('Error fetching recipe:', error));
   }, [id]);
 
