@@ -2,89 +2,79 @@ import React, { useEffect, useState } from "react";
 import "./header.css";
 import { Link, useNavigate } from "react-router-dom";
 export const Header = () => {
-
-  
-
   let status = true;
-  const showMenu = () =>{
-    const menu = document.querySelector('.header-nav')
 
-    if(status){
-      menu.style.top = '0'
-      document.querySelector('.menu').innerHTML = 'x'
-      status= false
+  const showMenu = () => {
+    const menu = document.querySelector('.header-nav');
+
+    if (status) {
+      menu.style.top = '0';
+      document.querySelector('.menu').innerHTML = '<i class="fas fa-times"></i>';
+      status = false;
+    } else {
+      menu.style.top = '-400px';
+      document.querySelector('.menu').innerHTML = '<i class="fas fa-bars"></i>';
+      status = true;
     }
-    else{
-      menu.style.top = '-400px'
-      document.querySelector('.menu').innerHTML = 'menu'
-      status = true
-
-
-    }
-    console.log(status)
-  }
+    console.log(status);
+  };
 
   let alertStatus = true;
   const showAlertSearch = () => {
-    const alert = document.querySelector(".search-alert")
+    const alert = document.querySelector(".search-alert");
 
-    if(alertStatus){
-      // alert.style.top = '0'
-      alert.style.scale = '1'
-
-      document.querySelector(".rideau").style.display = "block"
-
-      alertStatus= false
+    if (alertStatus) {
+      alert.style.scale = '1';
+      document.querySelector(".rideau").style.display = "block";
+      alertStatus = false;
+    } else {
+      alert.style.scale = '0';
+      document.querySelector(".rideau").style.display = "none";
+      alertStatus = true;
     }
-    else{
-      // alert.style.top = '-800px'
-      alert.style.scale = '0'
-      document.querySelector(".rideau").style.display = "none"
-      alertStatus = true
-    }
-    console.log(status)
-  }
-  
+    console.log(status);
+  };
+
   return (
     <>
       <div className="header">
-      <div className="header-main">
-        <Link to={"/"}>
-        <div className="logo">
-          <h3>.Gasy</h3>
-          <h3 style={{color: "#52D960"}}>Kaly</h3>
+        <div className="header-main">
+          <Link to={"/"}>
+            <div className="logo">
+              <h3>.Gasy</h3>
+              <h3 style={{ color: "#52D960" }}>Kaly</h3>
+            </div>
+          </Link>
+          <span className="input-search" onClick={showAlertSearch}>
+            Search...
+          </span>
+          <div className="menu" onClick={showMenu}>
+            <i className="fas fa-bars"></i>
+          </div>
         </div>
-        </Link>
-        <span className="input-search" onClick={showAlertSearch}>
-          Search...
-        </span>
-        {/* <div className="identifiant"></div> */}
-        <div className="menu" onClick={showMenu}>Menu</div>
+
+        <div className="header-nav">
+          <ul>
+            <li>
+              <span className="search-list" onClick={showAlertSearch}>
+                <input type="search" placeholder="Search..." />
+              </span>
+            </li>
+            <li className="nav" onClick={showMenu}><i class="fa-solid fa-house"></i><Link to={"/accueil"}>Accueil</Link></li>
+            <li className="nav" onClick={showMenu}><Link to={"/global/plats"}>Plats</Link></li>
+            <li className="nav" onClick={showMenu}><Link to={"/global/desserts"}>Desserts</Link></li>
+            <li className="nav" onClick={showMenu}><Link to={"/global/goûters"}>Goûters</Link></li>
+            <li className="nav" onClick={showMenu}><Link to={"/global/boissons"}>Jus</Link></li>
+          </ul>
+        </div>
       </div>
 
-      <div className="header-nav">
-        <ul>
-          <li>
-            <span className="search-list" onClick={showAlertSearch}>
-              <input type="search" placeholder="Search..." />
-            </span>
-          </li>
-          <li className="nav" onClick={showMenu}><Link to={"/accueil"}>Accueil</Link></li>
-          <li className="nav" onClick={showMenu}><Link to={"/global/plats"}>Plats</Link></li>
-          <li className="nav" onClick={showMenu}><Link to={"/global/desserts"}>Desserts</Link></li>
-          <li className="nav" onClick={showMenu}><Link to={"/global/goûters"}>Goûters</Link></li>
-          <li className="nav" onClick={showMenu}><Link to={"/global/boissons"}>Jus</Link></li>
-        </ul>
-      </div>
-    </div>
-
-    <SearchAlert headfermeture={showMenu} fermer={showAlertSearch}/>
-    <div className='rideau' onClick={showAlertSearch}>
-            
-    </div>
+      <SearchAlert headfermeture={showMenu} fermer={showAlertSearch} />
+      <div className='rideau' onClick={showAlertSearch}></div>
     </>
   );
 };
+
 
 
 
