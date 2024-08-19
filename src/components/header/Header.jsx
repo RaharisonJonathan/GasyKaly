@@ -133,15 +133,17 @@ export function SearchAlert({ fermer, headfermeture }) {
 
   return (
     <div className="search-alert">
-      <span onClick={fermer}>Fermer</span>
+      <span onClick={fermer}><i class="fas fa-times"></i></span>
       <div className="header-search">
-        <input
-          type="search"
-          placeholder="Search your food..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-      </div>
+      <i className="fas fa-search search-icon"></i>
+      <input
+        type="search"
+        placeholder="Chercher la recette..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+    </div>
+
       <div className="container-list">
         <div className="results">
           {loading ? (
@@ -156,7 +158,7 @@ export function SearchAlert({ fermer, headfermeture }) {
               />
             ))
           ) : (
-            <p>No results found</p>
+            <p>Aucune recette trouvée</p>
           )}
         </div>
       </div>
