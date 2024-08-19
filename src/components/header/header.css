@@ -211,14 +211,12 @@
                 width: 100%;
                 /* background-color: blue; */
                 display: flex;
-                align-items: center;
-                justify-content: center;
                 font-size: 1.5rem;
                 gap: 10px;
             }
 
             .nav{
-                width: 90px;
+                width: 150px;
             }
 
 
