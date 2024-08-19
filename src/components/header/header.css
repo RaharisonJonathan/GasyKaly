@@ -327,12 +327,13 @@
             width: 80%;
             height: 100%;
             font-weight: 500;
-            border-radius: 50px;
             border: none;
             background-color: transparent;
             outline: none;
 
         }
+
+        
     }
 
     .container-list{

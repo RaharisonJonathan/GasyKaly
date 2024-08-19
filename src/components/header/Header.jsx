@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./header.css";
 import { Link, useNavigate } from "react-router-dom";
 export const Header = () => {
   let status = true;
+  const inputRef = useRef(null);
 
   const showMenu = () => {
     const menu = document.querySelector('.header-nav');
@@ -20,17 +21,22 @@ export const Header = () => {
   };
 
   let alertStatus = true;
-  const showAlertSearch = () => {
+  const showAlertSearch = (nettoie) => {
+    
     const alert = document.querySelector(".search-alert");
 
     if (alertStatus) {
       alert.style.scale = '1';
       document.querySelector(".rideau").style.display = "block";
       alertStatus = false;
+      inputRef.current.focus()
     } else {
       alert.style.scale = '0';
       document.querySelector(".rideau").style.display = "none";
       alertStatus = true;
+      inputRef.current.value = ""
+      nettoie("")
+
     }
     console.log(status);
   };
@@ -90,8 +96,8 @@ export const Header = () => {
         </div>
       </div>
 
-      <SearchAlert headfermeture={showMenu} fermer={showAlertSearch} />
-      <div className='rideau' onClick={showAlertSearch}></div>
+      <SearchAlert headfermeture={showMenu} reference={inputRef} fermer={showAlertSearch} />
+      <div className='rideau' ></div>
     </>
   );
 };
@@ -99,13 +105,17 @@ export const Header = () => {
 
 
 
-export function SearchAlert({ fermer, headfermeture }) {
+export function SearchAlert({ fermer, headfermeture, reference }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [dataCards, setDataCards] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filteredResults, setFilteredResults] = useState([]);
 
+
+
+
   useEffect(() => {
+    
     // Remplacez cette URL par l'URL de votre API
     fetch("https://mocki.io/v1/71ea0934-3484-4b48-a3fb-bb9ca5d04f5e")
       .then((response) => response.json())
@@ -131,9 +141,15 @@ export function SearchAlert({ fermer, headfermeture }) {
     }
   }, [searchTerm, dataCards]);
 
+  
+  
+
   return (
     <div className="search-alert">
-      <span onClick={fermer}><i class="fas fa-times"></i></span>
+      <span onClick={() =>{
+        fermer(setSearchTerm)
+        
+      }}><i class="fas fa-times"></i></span>
       <div className="header-search">
       <i className="fas fa-search search-icon"></i>
       <input
@@ -141,18 +157,21 @@ export function SearchAlert({ fermer, headfermeture }) {
         placeholder="Chercher la recette..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
+        ref={reference}
       />
     </div>
 
       <div className="container-list">
-        <div className="results">
+        <div className="results" >
           {loading ? (
             <p>Loading...</p>
           ) : filteredResults.length > 0 ? (
             filteredResults.map((item) => (
               <CardSearch
                 key={item.id} // Assurez-vous que `item.id` est une clé unique
-                fermeture={fermer}
+                fermeture={() =>{
+                  fermer(setSearchTerm)
+                }}
                 headfermeture={headfermeture}
                 card={item}
               />
