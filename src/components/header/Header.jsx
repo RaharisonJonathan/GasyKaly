@@ -60,11 +60,32 @@ export const Header = () => {
                 <input type="search" placeholder="Search..." />
               </span>
             </li>
-            <li className="nav" onClick={showMenu}><i class="fa-solid fa-house"></i><Link to={"/accueil"}>Accueil</Link></li>
-            <li className="nav" onClick={showMenu}><Link to={"/global/plats"}>Plats</Link></li>
-            <li className="nav" onClick={showMenu}><Link to={"/global/desserts"}>Desserts</Link></li>
-            <li className="nav" onClick={showMenu}><Link to={"/global/goûters"}>Goûters</Link></li>
-            <li className="nav" onClick={showMenu}><Link to={"/global/boissons"}>Jus</Link></li>
+            <li className="nav" onClick={showMenu}>
+              <Link to={"/accueil"}>
+                <i className="fas fa-home"></i> Accueil
+              </Link>
+            </li>
+            <li className="nav" onClick={showMenu}>
+              <Link to={"/global/plats"}>
+                <i className="fas fa-utensils"></i> Plats
+              </Link>
+            </li>
+            <li className="nav" onClick={showMenu}>
+              <Link to={"/global/desserts"}>
+                <i className="fas fa-ice-cream"></i> Desserts
+              </Link>
+            </li>
+            <li className="nav" onClick={showMenu}>
+              <Link to={"/global/goûters"}>
+                <i className="fas fa-cookie-bite"></i> Goûters
+              </Link>
+            </li>
+            <li className="nav" onClick={showMenu}>
+              <Link to={"/global/boissons"}>
+                <i className="fas fa-glass-martini-alt"></i> Jus
+              </Link>
+            </li>
+
           </ul>
         </div>
       </div>
