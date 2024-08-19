@@ -57,7 +57,7 @@ export const Header = () => {
           <ul>
             <li>
               <span className="search-list" onClick={showAlertSearch}>
-                <input type="search" placeholder="Search..." />
+                <input type="search" placeholder="Chercher..." />
               </span>
             </li>
             <li className="nav" onClick={showMenu}>

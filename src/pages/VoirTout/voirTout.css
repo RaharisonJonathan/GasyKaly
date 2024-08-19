@@ -14,7 +14,9 @@
     h3{
         font-size: 2rem;
         font-weight: bold;
-        text-decoration: underline;
+        color: #52d960;
+
+        /* text-decoration: underline; */
     }
 
     .contenant-body{
