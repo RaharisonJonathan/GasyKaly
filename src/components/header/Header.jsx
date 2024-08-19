@@ -58,7 +58,7 @@ export const Header = () => {
         <span className="input-search" onClick={showAlertSearch}>
           Search...
         </span>
-        <div className="identifiant"></div>
+        {/* <div className="identifiant"></div> */}
         <div className="menu" onClick={showMenu}>Menu</div>
       </div>
 

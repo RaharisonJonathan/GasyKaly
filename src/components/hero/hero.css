@@ -75,10 +75,10 @@
 }
 
 .arrow{
-    font-size: 50px;
+    font-size: 25px;
     font-weight: bold;
     background-color: rgba(0,0,0,0.1);
-    width: 150px;
+    width: 100px;
     height: 75px;
     display: flex;
     position: relative;
@@ -99,7 +99,7 @@
 .slick-arrow.slick-prev::before{
     /* background-color: red; */
     color: rgba(128, 128, 128, 0.781);
-    font-size: 100px !important;
+    font-size: 75px !important;
     color: #52D960;
     position: relative;
     left: 15px;
@@ -110,9 +110,9 @@
     /* background-color: red; */
     color: rgba(198, 194, 194, 0.781);
     color: #52D960;
-    font-size: 100px !important;
+    font-size: 75px !important;
     position: relative;
-    left: -95px;
+    left: -70px;
     top: -25px;
 }
 
