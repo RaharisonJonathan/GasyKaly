@@ -17,7 +17,6 @@ export const Header = () => {
       document.querySelector('.menu').innerHTML = '<i class="fas fa-bars"></i>';
       status = true;
     }
-    console.log(status);
   };
 
   let alertStatus = true;
@@ -38,7 +37,6 @@ export const Header = () => {
       nettoie("")
 
     }
-    console.log(status);
   };
 
   return (
@@ -46,13 +44,13 @@ export const Header = () => {
       <div className="header">
         <div className="header-main">
           <Link to={"/"}>
-            <div className="logo">
+          <div className="logo" onClick={() => status ? console.log(status) : showMenu()}>
               <h3>.Gasy</h3>
               <h3 style={{ color: "#52D960" }}>Kaly</h3>
             </div>
           </Link>
           <span className="input-search" onClick={showAlertSearch}>
-            Search...
+          <i className="fas fa-search search-icon"></i>
           </span>
           <div className="menu" onClick={showMenu}>
             <i className="fas fa-bars"></i>

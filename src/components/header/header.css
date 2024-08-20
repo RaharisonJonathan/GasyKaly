@@ -41,15 +41,15 @@
     
     
     .input-search{
-        width: 300px;
-        max-width: 300px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
         display: flex;
         background-color: rgba(128, 128, 128, 0.2);
         border-radius: 50px;
         align-items: center;
-        justify-content: flex-start;
-        padding-left: 20px;
+        justify-content: center;
+        font-size: 25px;
+        color: #52d9606c;
         
         
         input{
@@ -62,6 +62,12 @@
             outline: none;
             
         }
+    }
+
+    .input-search:hover{
+        scale: 1.1;
+        color: #52D960;
+        cursor: pointer;
     }
     
     .identifiant{
